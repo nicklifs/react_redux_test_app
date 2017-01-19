@@ -1,0 +1,50 @@
+.mobile-block {
+  width: 350px;
+  height: 500px;
+  background: #cccccc;
+  border: 1px solid yellow;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px 0;
+  position: relative;
+  overflow-y: auto;
+}
+
+.mobile-block__title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.mobile-block__description {
+  margin-top: 20px;
+}
+
+.input {
+  margin: 5px 0;
+  width: 100%;
+}
+
+button[type='submit']:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.faves-btn {
+  border: 1px solid black;
+  padding: 3px;
+  background: lightgreen;
+  position: absolute;
+  right: 5px;
+  text-decoration: none !important;
+}
+
+.searchForm .spinner {
+  right: -70px;
+  top: -25px;
+  left: auto;
+}
+
+.fr {
+  float: right;
+}
+
+

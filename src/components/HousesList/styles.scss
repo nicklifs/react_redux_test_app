@@ -1,0 +1,74 @@
+.HousesList-container {
+  margin: 10px 10px 0 10px;
+}
+
+.HousesList {
+  border: 1px solid black;
+  padding: 5px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.HousesList .house-item {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.HousesList .house-item:hover {
+  opacity: .7;
+}
+
+.HousesList .house-item:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.HousesList .house-item > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.HousesList .house-item .house-image {
+  width: 30%;
+}
+
+.HousesList .house-item .house-text {
+  width: 70%;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.show-more-btn-container {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.show-more-btn {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.spinner {
+  position: absolute;
+  top: -52px;
+  left: 120px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.display-block {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}

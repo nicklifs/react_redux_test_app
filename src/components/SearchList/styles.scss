@@ -1,0 +1,30 @@
+.SearchList-container {
+  //margin: 10px 10px 0 10px;
+}
+
+.SearchList {
+  border: 1px solid black;
+  padding: 5px;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.SearchList .search-item {
+  cursor: pointer;
+}
+.SearchList .search-item:hover {
+  opacity: .7;
+}
+
+.SearchList .search-item > div {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.SearchList .search-item .search-text {
+  width: 70%;
+}
+
+.SearchList .search-item .search-count {
+  width: 30%;
+}

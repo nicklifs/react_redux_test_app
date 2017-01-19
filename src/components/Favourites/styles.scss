@@ -1,0 +1,30 @@
+.favsHouses {
+  padding: 10px;
+}
+
+.favsHouses .favs-item {
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.favsHouses .favs-item:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.favsHouses .favs-item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.favsHouses .favs-item > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.favsHouses .favs-item .favs-image {
+  width: 30%;
+}
+
+.favsHouses .favs-item .favs-content {
+  width: 70%;
+}
