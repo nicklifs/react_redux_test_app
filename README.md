@@ -1,2 +1,5 @@
-# react-router-course-ru
-Код для раздела [Ссылка на главную](https://maxfarseer.gitbooks.io/react-router-course-ru/content/ssilka_na_glavnuyu.html)
+# react redux test app
+
+Data stored in window.localStorage(housesList, searchList)
+
+Description: https://github.com/tastejs/PropertyCross/tree/master/specification#search-results-page
