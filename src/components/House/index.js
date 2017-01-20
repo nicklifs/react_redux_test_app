@@ -13,8 +13,6 @@ export class House extends Component {
     this.onBtnClickHandler = this.onBtnClickHandler.bind(this);
 
     this.state = {house: null};
-
-    console.log('house constructor', this.props)
   }
   onBtnClickHandler = e => {
     e.preventDefault();
@@ -47,6 +45,25 @@ export class House extends Component {
       if (house) {
           this.setState({house: house});
       }
+  }
+  componentDidMount() {
+      console.log('component mount');
+  }
+  componentWillUnmount() {
+      console.log('component unmount');
+  }
+  componentWillReceiveProps(nextProps) {
+      console.log('componentWillReceiveProps - nextProps', nextProps, 'current fav:', this.props.currentHouse.fav);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+      console.log('shouldComponentUpdate - nextProps|nextState', nextProps, nextState, 'current fav:', this.props.currentHouse.fav);
+      return true;
+  }
+  componentWillUpdate(nextProps, nextState) {
+    console.log('componentWillUpdate - nextProps|nextState', nextProps, nextState)
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate - prevProps|prevState', prevProps, prevState)
   }
   render() {
 

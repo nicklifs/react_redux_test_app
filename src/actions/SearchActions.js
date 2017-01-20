@@ -39,8 +39,6 @@ export function getHousesByLocation(payload) {
               }
             })
 
-            console.log('111 = ', place_name);
-
             let searchList = [{
               text: place_name,
               count: data.response.total_results
@@ -66,10 +64,6 @@ export function getHousesByLocation(payload) {
           }
         }
       })
-
-    setTimeout(() => {
-
-    },2000)
   }
 }
 
@@ -113,26 +107,6 @@ export function getHousesMore(payload) {
       }
     })
 
-  }
-}
-
-export function getSearchList(payload) {
-
-  return (dispatch) => {
-
-      dispatch({
-        type: 'GET_SEARCH_LIST_REQUEST',
-        payload: {
-          list: payload.list,
-        }
-      })
-
-      dispatch({
-        type: 'GET_SEARCH_LIST_REQUEST',
-        payload: {
-          list: payload.list,
-        }
-      })
   }
 }
 

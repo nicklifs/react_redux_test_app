@@ -21,10 +21,10 @@ export class Favourites extends Component {
 
   componentDidMount() {
     // test using context
-    this.context.store.dispatch({
+    /*this.context.store.dispatch({
       type: 'TEST',
       payload: {}
-    })
+    })*/
   }
 
   onItemClickHandler = e => {
