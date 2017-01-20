@@ -8,8 +8,6 @@ import { routes } from './routes'
 
 const store = configureStore()
 
-//window.store222 = store;
-
 class ProviderCustom extends React.Component {
     getChildContext() {
         return {
@@ -30,3 +28,14 @@ render(
     </ProviderCustom>,
     document.getElementById('root')
 )
+
+// subscribe store
+const showStoreState = () => {
+    console.log('store', store.getState());
+};
+store.subscribe(showStoreState);
+showStoreState();
+/*store.subscribe(() => {
+    console.log('subscribe', store.getState());
+})*/
+

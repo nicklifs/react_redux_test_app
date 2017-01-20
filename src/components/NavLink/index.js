@@ -5,6 +5,12 @@ import './styles.scss'
 
 export default class NavLink extends Component {
   render() {
-    return <Link {...this.props} activeClassName='active'/>
+    return <Link activeClassName='active' {...this.props}/> // now you can assign other activeClassName in NavLink
   }
 }
+
+/*
+// equal
+var AppLink = function(props) {
+  return <Link {...props} activeClassName='active' />;
+}*/

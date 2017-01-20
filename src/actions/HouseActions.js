@@ -14,8 +14,6 @@ export function saveHouseForViewDetails(payload) {
         store.favHouses[payload.number] :
         store.searchPage.housesList.data[payload.number];
 
-    console.log(store, house, payload)
-
     dispatch({
       type: 'SAVE_HOUSE_FOR_VIEW',
       payload: {
