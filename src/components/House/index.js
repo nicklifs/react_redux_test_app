@@ -47,10 +47,23 @@ export class House extends Component {
       }
   }
   componentDidMount() {
-      console.log('component mount');
+      console.log('component mount', this.props);
+
+      const {store} = this.context;
+
+      this.unsubscribe = store.subscribe(() => {
+          console.log('forceUpdate');
+          this.forceUpdate()
+      })
+      // test using context
+      this.props.dispatch({
+          type: 'TEST',
+          payload: {}
+      })
   }
   componentWillUnmount() {
       console.log('component unmount');
+      this.unsubscribe();
   }
   componentWillReceiveProps(nextProps) {
       console.log('componentWillReceiveProps - nextProps', nextProps, 'current fav:', this.props.currentHouse.fav);
@@ -100,6 +113,10 @@ export class House extends Component {
   }
 }
 
+House.contextTypes = {
+    store: React.PropTypes.object
+};
+
 function mapStateToProps(state) {
   return {
     currentHouse: state.currentHouse,
@@ -110,8 +127,11 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(HouseActions, dispatch),
-    actionsHouseFavs: bindActionCreators(HouseFavsActions, dispatch)
+    actionsHouseFavs: bindActionCreators(HouseFavsActions, dispatch),
+    dispatch
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(House)
+// export default connect ()(House) || export default connect (mapStateToProps)(House) ->
+// dispatch AVAILABLE in component House (this.props.dispatch)

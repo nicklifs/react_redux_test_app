@@ -12,12 +12,6 @@ const initialState = {
 export default function searchpagestate(state = initialState, action) {
 
   switch (action.type) {
-
-    case 'GET_SEARCH_LIST_REQUEST':
-      return state
-
-    case 'GET_SEARCH_LIST_SUCCESS':
-      return {...state, name: action.payload.name, isAuthenticated: action.payload.isAuthenticated}
     
     case 'SEARCH_LIST_ADD_ITEM':
       return {...state, searchList: action.payload.searchList}

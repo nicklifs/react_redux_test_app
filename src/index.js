@@ -2,13 +2,13 @@ import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, browserHistory } from 'react-router'
-//import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 import { routes } from './routes'
 
 const store = configureStore()
 
-class ProviderCustom extends React.Component {
+/*class ProviderCustom extends React.Component {
     getChildContext() {
         return {
             store: this.props.store
@@ -20,12 +20,12 @@ class ProviderCustom extends React.Component {
 }
 ProviderCustom.childContextTypes = {
     store: React.PropTypes.object
-}
+}*/
 
 render(
-    <ProviderCustom store={store}>
+    <Provider store={store}>
         <Router history={browserHistory} routes={routes} />
-    </ProviderCustom>,
+    </Provider>,
     document.getElementById('root')
 )
 

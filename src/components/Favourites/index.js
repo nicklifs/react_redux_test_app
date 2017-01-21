@@ -19,14 +19,6 @@ export class Favourites extends Component {
     this.onItemClickHandler = this.onItemClickHandler.bind(this);
   }
 
-  componentDidMount() {
-    // test using context
-    /*this.context.store.dispatch({
-      type: 'TEST',
-      payload: {}
-    })*/
-  }
-
   onItemClickHandler = e => {
     e.preventDefault();
 
