@@ -8,6 +8,8 @@ import { routes } from './routes'
 
 const store = configureStore()
 
+console.log('start store:', store.getState());
+
 /*class ProviderCustom extends React.Component {
     getChildContext() {
         return {
