@@ -5,8 +5,21 @@ import { Router, browserHistory } from 'react-router'
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 import { routes } from './routes'
+//import { loadState } from './localStorage'
+import { loadState, saveState } from './localStorage'
+import throttle from 'lodash/throttle'
 
-const store = configureStore()
+/*const persistedState = {
+    currentHouse: {
+        title: 'test'
+    }
+}*/
+
+const store = configureStore(loadState())
+
+store.subscribe(throttle(() => {
+    saveState(store.getState());
+}, 1000));
 
 console.log('start store:', store.getState());
 

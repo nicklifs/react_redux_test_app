@@ -8,6 +8,9 @@ export default function housesfavstate(state = initialState, action) {
     case 'REMOVE_HOUSE_FROM_FAVS':
       return action.payload.houses;
 
+    case 'FETCH_ADD_FAVS':
+      return [...action.payload.favs, ...state]
+
     case 'TEST':
       return state;
     

@@ -5,7 +5,9 @@ import './styles.scss'
 
 export default class NavLink extends Component {
   render() {
-    return <Link activeClassName='active' {...this.props}/> // now you can assign other activeClassName in NavLink
+    return <Link activeClassName='active'
+                 {...this.props}
+                 activeStyle={{color: 'green'}} /> // now you can assign other activeClassName in NavLink
   }
 }
 

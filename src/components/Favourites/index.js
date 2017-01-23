@@ -5,6 +5,8 @@ import * as HouseFavsActions from '../../actions/HouseFavsActions'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+import { fetchFavs } from '../../api'
+
 import './styles.scss'
 
 import $ from 'jquery'
@@ -32,6 +34,20 @@ export class Favourites extends Component {
         nextUrl: '/favourites/' + number
       }
     })
+  }
+
+  componentDidMount(){
+    //this.fetchData();
+  }
+  fetchData() {
+    fetchFavs().then((data) =>  {
+      this.context.store.dispatch({
+        type: 'FETCH_ADD_FAVS',
+        payload: {
+          favs: data
+        }
+      });
+    });
   }
 
   render() {
