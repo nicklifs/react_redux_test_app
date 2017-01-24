@@ -11,6 +11,8 @@ export default class App extends Component {
                     <li><NavLink onlyActiveOnIndex={true} to='/'>Главная</NavLink></li>
                     <li><NavLink to='/propertySearch'>House Search</NavLink></li>
                     <li><NavLink to='/favourites'>Favourites</NavLink></li>
+                    <li><NavLink to='/react-test'>React Test</NavLink></li>
+                    <li><NavLink to='/jsx'>JSXLiveCompiler</NavLink></li>
                 </ul>
                 {this.props.children}
                 {/*React.cloneElement(this.props.children, { searchList: this.props.searchList })*/}
