@@ -9,7 +9,7 @@ npm install lodash --save
 npm install --save es6-promise
 
 
-last changes - branch f2
+last changes - branch f3
 
 page http://localhost:3000/react-test   -   basic react
 
