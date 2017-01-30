@@ -10,6 +10,7 @@ import Favourites from './components/Favourites'
 import House from './components/House'
 import ReactTest from './components/ReactTest'
 import JSXLiveCompiler from './components/JSXLiveCompiler'
+import Tests from './containers/Tests'
 
 export const routes = (
   <div>
@@ -21,6 +22,7 @@ export const routes = (
         <Route path='/favourites/:number' component={House} />
         <Route path='/react-test' component={ReactTest} />
         <Route path='/jsx' component={JSXLiveCompiler} />
+        <Route path='/tests-jest' component={Tests} />
     </Route>
     <Route path='*' component={NotFound} />
   </div>
